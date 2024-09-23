@@ -14,6 +14,10 @@ public class AboutMe {
 		System.out.println("I am in grade 11");
 		System.out.println("My teacher is Ms. Kemp");
 		System.out.println("I go to Lawrence Park");
+		System.out.println("\"Go Panthers!\"");
+		System.out.println("Date: %-15sTimes: %8s","Monday, (9:00-10:20);
+		
+		
 	}
 
 }
