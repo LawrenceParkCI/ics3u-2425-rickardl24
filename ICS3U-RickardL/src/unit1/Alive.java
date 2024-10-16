@@ -26,6 +26,7 @@ public class Alive {
 		int TodayMonth;
 		int TodayDay;
 
+		//create ability to insert values
 		BirthYear = sc.nextInt();
 		BirthMonth = sc.nextInt();
 		BirthDay = sc.nextInt();
@@ -33,9 +34,11 @@ public class Alive {
 		TodayMonth = sc.nextInt();
 		TodayDay = sc.nextInt();
 		
+		//calculations for days alive and hours slept
 		int DaysAlive = (((TodayYear - BirthYear) * 365) + ((TodayMonth - BirthMonth) * 30) + (TodayDay - BirthDay));
 		int HoursSlept = (DaysAlive * 8);
 		
+		//display message for final result
 		System.out.println("You have been alive for "+ DaysAlive + " days");
 		System.out.println("You have slept "+ HoursSlept + " hours");
 	}
