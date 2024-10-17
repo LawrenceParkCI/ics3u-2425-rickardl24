@@ -1,5 +1,9 @@
 package unit1;
-
+/**
+ * Description: Creating string manipulation
+ * Date: October 17, 2024
+ * @author Liam Rickard
+ */
 import java.util.Scanner;
 
 public class StringManipulation {
@@ -7,10 +11,12 @@ public class StringManipulation {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
 		
+		//create user interaction
 		System.out.println("Input a sentance and press <Enter>");
 		String UserInput;
 		UserInput = sc.nextLine();
 		
+		//create sentence modifiers
 		int firstWord = UserInput.indexOf(" ");
 		int lastWord = UserInput.lastIndexOf(" ");
 		System.out.println(UserInput);
