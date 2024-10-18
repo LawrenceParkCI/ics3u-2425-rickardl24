@@ -31,9 +31,6 @@ public class Carpet {
 		//print final output
 		System.out.println("Your carpet will cost $" + TotalCost);
 		
-
-
-
 	}
 
 }
