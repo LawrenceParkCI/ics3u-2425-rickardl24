@@ -3,9 +3,9 @@ package unit1;
 import java.util.Scanner;
 
 /**
-* Description:
-* Date:
-* @author 
+* Description: Introduction to casting
+* Date: October 21, 2024
+* @author Liam Rickard
 */
 public class Casting {
  
