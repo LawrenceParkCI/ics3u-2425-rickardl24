@@ -44,7 +44,7 @@ public class GroceryShopping {
         double total = subtotal + tax;
 
         // Print Date and Time for Receipt
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/D/YYYY HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/DD/YYYY HH:mm");
         String dateTime = LocalDateTime.now().format(formatter);
 
         // Print Receipt
