@@ -38,10 +38,10 @@ public class BasicBoolean {
     /*Test out these boolean operators. Figure out the meaning
       * > means: Something is larger than another number
       * < means: Something is smaller than another number
-      * <= means: Something is larger or equal to another number
-      * >= means: Something is smaller or equal to another number
-      * == means:
-      * != means:
+      * <= means: Something is smaller or equal to another number
+      * >= means: Something is larger or equal to another number
+      * == means: A number is equal to 
+      * != means: A number is not equal to
     */
 
   }
