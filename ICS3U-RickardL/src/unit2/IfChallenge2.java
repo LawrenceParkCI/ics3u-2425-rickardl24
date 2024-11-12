@@ -34,6 +34,7 @@ public class IfChallenge2 {
     ie.  2 5 11 or 5 6 7 are strictly in order.
     ie.  6 5 7 or 5 5 7 are not
 		 */
+		in.close();
 	}
-	
+
 }
