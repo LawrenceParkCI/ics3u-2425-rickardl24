@@ -14,23 +14,23 @@ public class Carpet {
 		System.out.println("Type in the length of the room in meters and press <Enter>");
 		System.out.println("Type in the width of the room in meters and press <Enter>");
 		System.out.println("Type in the cost per square meter of the carpet and press <Enter>");
-		
+
 		//create variables
 		int roomLength;
 		int roomWidth;
 		int costPerMeter;
-		
+
 		//create user inputs to calculate
 		roomLength = sc.nextInt();
 		roomWidth = sc.nextInt();
 		costPerMeter = sc.nextInt();
-		
+
 		//create equation for cost
 		int TotalCost = (roomLength * roomWidth * costPerMeter);
-		
+
 		//print final output
 		System.out.println("Your carpet will cost $" + TotalCost);
-		
+
 	}
 
 }

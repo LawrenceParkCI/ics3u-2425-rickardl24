@@ -70,7 +70,7 @@ public class CreatingVariables {
 		// Print it out in a sentence (Hint: remember how we combined text and numbers
 		// in a print statement)
 		System.out.println("My age is "+myAge);
-		
+
 		// Assign it a new value, that is 10 more than the original value
 		myAge= myAge+10;
 		// Print it out in a new sentence (Hint: remember how we combined text and

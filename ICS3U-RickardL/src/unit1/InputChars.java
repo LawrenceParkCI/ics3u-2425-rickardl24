@@ -1,5 +1,9 @@
 package unit1;
-
+/**
+ * Description: Working with char data type
+ * Date: October 11, 2024
+ * @author Liam Rickard
+ */
 import java.util.Scanner;
 
 public class InputChars {
@@ -15,10 +19,10 @@ public class InputChars {
 		ch3 = sc.nextLine().charAt(0);
 		System.out.println();
 		System.out.print("Together these 3 letters spell: " + (ch1 + ch2 + ch3));
-		
-		
-	
-		
+
+
+
+
 
 	}
 

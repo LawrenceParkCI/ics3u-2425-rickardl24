@@ -22,15 +22,15 @@ public class NFOutput {
 		double total = cost + (cost * TAX_RATE);
 		System.out.println("The cost of your item with tax is " + money.format(total));
 		System.out.println("The tax rate is " + percent.format(TAX_RATE));
-		
-		//How can you change how your value is displayed?
-		numberformat.get
-		/*
-		 * 
-		 */
-		
-		//What other formats does NumberFormat offer?
 
+		//How can you change how your value is displayed?
+
+		/*
+		 * You can't change how the number is displayed because it is not the same as DecimalFormat
+		 */
+
+		//What other formats does NumberFormat offer?
+		numberformat.get
 
 		sc.close();
 	}

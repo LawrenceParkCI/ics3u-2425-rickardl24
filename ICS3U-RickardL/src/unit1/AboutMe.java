@@ -34,9 +34,9 @@ public class AboutMe {
 		System.out.println("\n \t \t    Computer Science \t \t Data Management \t   IAPS      \t \t Accounting");
 		System.out.format("\t Friday \t 9:00-10:20 \t \t 10:20-11:40 \t \t 12:40-1:55 \t \t 2:00-3:15");
 		System.out.println("\n");
-		
-		
-		
+
+
+
 	}
 
 }
