@@ -61,10 +61,10 @@ public class While {
 
 		//Create a while loop that asks for a word, 
 		//and prints it out 20 times.
-		
+
 		System.out.println("Type in a word: ");
 		String word = in.nextLine();
-		
+
 		int worduse = 0;
 		while (worduse < 20) {
 			System.out.println(word);

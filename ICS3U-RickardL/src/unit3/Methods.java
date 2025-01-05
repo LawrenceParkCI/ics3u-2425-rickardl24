@@ -44,10 +44,17 @@ public static void main(String[] args) {
   System.out.println(myNum);
 
  //Explain what is happening
+  /*
+   * The value of 30 from myNum is being doubled, making 60
+   */
   System.out.println(doubleNumber(5));
+  /*
+   * The value of 5 is being doubled, making 10
+   */
 
 
   //Part 3 is at the bottom, and return here to print out your method's return value
+  int largernum = larger(5,10);
   
 }
 

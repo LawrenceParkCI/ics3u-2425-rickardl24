@@ -30,16 +30,16 @@ public class LoopChallenge2 {
 		do {
 			System.out.print("Enter a positive number");
 			number = in.nextDouble();
-			
+
 			if (number < 0) {
 				System.out.println("Invalid number. Type in a positive number");
 			}
-			
+
 		} while (number < 0);
-		
+
 		answer = Math.sqrt(number);
 		System.out.println("The squart root of " + number + "is " + answer);
-		
+
 		in.close();
 	}
 }
