@@ -22,16 +22,16 @@ public class BlackJack {
             c.println("Welcome to Blackjack!");
             c.print("You will be competing against an online dealer. Good luck!");
 
-            ArrayList<String> deck = initializeDeck();
+            ArrayList<String> deck = initializeDeck(); // create array of an initialized deck, and shuffle it 
             Collections.shuffle(deck);
 
-            ArrayList<String> playerHand = new ArrayList<>();
+            ArrayList<String> playerHand = new ArrayList<>(); //creating new array for each hand
             ArrayList<String> dealerHand = new ArrayList<>();
 
             dealerHand.add(deck.remove(0));
             dealerHand.add(deck.remove(0));
 
-            int bet = 0;
+            int bet = 0; // Total amount of money for the player
             if (playerMoney > 0) {
                 c.print(" \nYour current balance: $" + playerMoney);
                 c.println(" Enter your bet: $");
@@ -48,10 +48,10 @@ public class BlackJack {
                 break;
             }
 
-            playerHand.add(deck.remove(0));
+            playerHand.add(deck.remove(0)); //remove a card from the deck and add it to playerHand
             playerHand.add(deck.remove(0));
 
-            c.println("Your turn.");
+            c.println("Your turn."); //shows player's hand, as well as the calculated value up to 21
             c.println("Your hand: " + playerHand + " (Total: " + calculateHandValue(playerHand) + ")");
             c.println("Dealer's face-up card: " + dealerHand.get(0));
 
@@ -59,7 +59,7 @@ public class BlackJack {
             while (playerTurn) {
                 c.print("Do you want to 'hit' or 'stand'? ");
                 String choice = c.readString().toLowerCase();
-
+                // player's turn if they choose to hit
                 if (choice.equals("hit")) {
                     playerHand.add(deck.remove(0));
                     c.println("You drew a " + playerHand.get(playerHand.size() - 1));
@@ -76,17 +76,17 @@ public class BlackJack {
                 }
             }
 
-            c.println("\nDealer's turn.");
+            c.println("\nDealer's turn."); // Dealer's hand
             c.println("Dealer's hand: " + dealerHand + " (Total: " + calculateHandValue(dealerHand) + ")");
             while (calculateHandValue(dealerHand) < 17) {
                 Thread.sleep(1000);
-                dealerHand.add(deck.remove(0));
+                dealerHand.add(deck.remove(0)); // remove card from deck, add to dealerHand
                 c.println("Dealer draws a " + dealerHand.get(dealerHand.size() - 1));
             }
             int dealerTotal = calculateHandValue(dealerHand);
             c.println("Dealer's final hand: " + dealerHand + " (Total: " + dealerTotal + ")");
 
-            String result = determineWinner(playerHand, dealerHand);
+            String result = determineWinner(playerHand, dealerHand); // determine result between player and dealer's hand
             if (result.equals("win")) {
                 playerMoney += bet;
                 c.println("You win! New balance: $" + playerMoney);
@@ -97,7 +97,7 @@ public class BlackJack {
                 c.println("It's a tie. Balance remains: $" + playerMoney);
             }
 
-            c.print("\nDo you want to play again? (yes/no): ");
+            c.print("\nDo you want to play again? (yes/no): "); //ask if they want to play again
             String playAgain = c.readString().toLowerCase();
             if (playAgain.equals("yes")) {
                 if (playerMoney <= 0) {
@@ -110,7 +110,7 @@ public class BlackJack {
         }
         c.println("Thank you for playing! Final balance: $" + playerMoney);
     }
-
+    // create image for each round
     public static BufferedImage loadBlackJackTable() {
         try {
             return ImageIO.read(new File("src/unit3/blackJackTable.png"));
@@ -119,31 +119,32 @@ public class BlackJack {
             return null;
         }
     }
-
+    // create decks for each round 
     public static ArrayList<String> initializeDeck() {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
         ArrayList<String> deck = new ArrayList<>();
-        for (String suit : suits) {
+        for (String suit : suits) { // for suit and rank, take one of the values from the array
             for (String rank : ranks) {
                 deck.add(rank + " of " + suit);
             }
         }
         return deck;
     }
-
+    // calculate hand value for each round
     public static int calculateHandValue(ArrayList<String> hand) {
         int value = 0;
         int aces = 0;
-        for (String card : hand) {
-            String rank = card.split(" ")[0];
+        for (String card : hand) //for the cards of each hand being given
+        {
+            String rank = card.split(" ")[0]; //taking the first randomized string from the array to display the rank of a card
             if (rank.equals("Jack") || rank.equals("Queen") || rank.equals("King")) {
                 value += 10;
             } else if (rank.equals("Ace")) {
                 value += 11;
                 aces++;
             } else {
-                value += Integer.parseInt(rank);
+                value += Integer.parseInt(rank); //convert string to int to add to value for the round
             }
         }
         while (value > 21 && aces > 0) {
@@ -152,7 +153,7 @@ public class BlackJack {
         }
         return value;
     }
-
+    // determine winner for each round
     public static String determineWinner(ArrayList<String> playerHand, ArrayList<String> dealerHand) {
         int playerTotal = calculateHandValue(playerHand);
         int dealerTotal = calculateHandValue(dealerHand);
